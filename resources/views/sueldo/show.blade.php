@@ -11,37 +11,37 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Sueldo</span>
+                            <span class="card-title">Mostrar Sueldo</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('sueldos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('sueldos.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Idrol:</strong>
+                            <strong>Id:</strong>
                             {{ $sueldo->idrol }}
                         </div>
                         <div class="form-group">
-                            <strong>Sueldobase:</strong>
-                            {{ $sueldo->sueldobase }}
+                            <strong>Sueldo Base:</strong>
+                           $ {{ $sueldo->sueldobase }}
                         </div>
                         <div class="form-group">
                             <strong>Bono:</strong>
-                            {{ $sueldo->bono }}
+                            $ {{ $sueldo->bono }}
                         </div>
                         <div class="form-group">
-                            <strong>Precioentrega:</strong>
-                            {{ $sueldo->precioentrega }}
+                            <strong>Precio por Entrega:</strong>
+                            $ {{ $sueldo->precioentrega }}
                         </div>
                         <div class="form-group">
-                            <strong>Horaslaborables:</strong>
+                            <strong>Horas Laborables:</strong>
                             {{ $sueldo->horaslaborables }}
                         </div>
                         <div class="form-group">
-                            <strong>Diaslaborables:</strong>
+                            <strong>Dias Laborables:</strong>
                             {{ $sueldo->diaslaborables }}
                         </div>
 

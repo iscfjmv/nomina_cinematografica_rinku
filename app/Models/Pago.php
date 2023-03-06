@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $idempleado
  * @property $idsueldo
  * @property $numeroentregas
+ * @property $mespago
  * @property $pagototal
  * @property $created_at
  * @property $updated_at
@@ -27,6 +28,7 @@ class Pago extends Model
 		'idempleado' => 'required',
 		'idsueldo' => 'required',
 		'numeroentregas' => 'required',
+		'mespago' => 'required',
 		'pagototal' => 'required',
     ];
 
@@ -37,7 +39,7 @@ class Pago extends Model
      *
      * @var array
      */
-    protected $fillable = ['idempleado','idsueldo','numeroentregas','pagototal'];
+    protected $fillable = ['idempleado','idsueldo','numeroentregas','mespago','pagototal'];
 
 
     /**

@@ -34,8 +34,8 @@ class PagoController extends Controller
     public function create()
     {
         $pago = new Pago();
-        $empleados = Empleado::pluck('nombre', 'id');
-        $sueldos = Sueldo::pluck('sueldobase','id');
+        $empleados = Empleado::pluck('nombre','id');
+        $sueldos= Sueldo::pluck('sueldobase','id');
         return view('pago.create', compact('pago','empleados','sueldos'));
     }
 
@@ -77,8 +77,8 @@ class PagoController extends Controller
     public function edit($id)
     {
         $pago = Pago::find($id);
-        $empleados = Empleado::pluck('nombre', 'id');
-        $sueldos = Sueldo::pluck('sueldobase','id');
+        $empleados = Empleado::pluck('nombre','id');
+        $sueldos= Sueldo::pluck('sueldobase','id');
         return view('pago.edit', compact('pago','empleados','sueldos'));
     }
 

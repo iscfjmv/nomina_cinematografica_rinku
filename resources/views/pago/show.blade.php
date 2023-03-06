@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Pago</span>
+                            <span class="card-title">Mostrar Pago</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('pagos.index') }}"> Back</a>
@@ -21,19 +21,23 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Idempleado:</strong>
+                            <strong>Empleado:</strong>
                             {{ $pago->idempleado }}
                         </div>
                         <div class="form-group">
-                            <strong>Idsueldo:</strong>
+                            <strong>Sueldo:</strong>
                             {{ $pago->idsueldo }}
                         </div>
                         <div class="form-group">
-                            <strong>Numeroentregas:</strong>
+                            <strong>Numero de Entregas:</strong>
                             {{ $pago->numeroentregas }}
                         </div>
                         <div class="form-group">
-                            <strong>Pagototal:</strong>
+                            <strong>Mes de Pago:</strong>
+                            {{ $pago->mespago }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Pago Total:</strong>
                             {{ $pago->pagototal }}
                         </div>
 

@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Pago') }}
+                                {{ __('Pagos') }}
                             </span>
 
                              <div class="float-right">
@@ -38,7 +38,8 @@
                                         
 										<th>Empleado</th>
 										<th>Sueldo Base</th>
-										<th>Numero de entregas</th>
+										<th>Numero de Entregas</th>
+										<th>Mes de Pago</th>
 										<th>Pago Total</th>
 
                                         <th></th>
@@ -50,8 +51,9 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $pago->empleado->nombre }}</td>
-											<td>{{ $pago->sueldo->sueldobase }}</td>
+											<td>$ {{ $pago->sueldo->sueldobase }} por hora</td>
 											<td>{{ $pago->numeroentregas }}</td>
+											<td>{{ $pago->mespago }}</td>
 											<td>{{ $pago->pagototal }}</td>
 
                                             <td>

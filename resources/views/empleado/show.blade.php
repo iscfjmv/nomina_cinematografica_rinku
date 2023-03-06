@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Empleado</span>
+                            <span class="card-title">Mostrar Empleado</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('empleados.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('empleados.index') }}"> Regresar</a>
                         </div>
                     </div>
 
@@ -25,11 +25,11 @@
                             {{ $empleado->nombre }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellidopaterno:</strong>
+                            <strong>Apellido Paterno:</strong>
                             {{ $empleado->apellidopaterno }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellidomaterno:</strong>
+                            <strong>Apellido Materno:</strong>
                             {{ $empleado->apellidomaterno }}
                         </div>
                         <div class="form-group">

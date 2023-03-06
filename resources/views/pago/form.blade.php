@@ -2,22 +2,22 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('idempleado') }}
-            {{ Form::text('idempleado', $pago->idempleado, ['class' => 'form-control' . ($errors->has('idempleado') ? ' is-invalid' : ''), 'placeholder' => 'Idempleado']) }}
+            {{ Form::label('Empleado') }}
+            {{ Form::select('idempleado',$empleados ,$pago->idempleado, ['class' => 'form-control' . ($errors->has('idempleado') ? ' is-invalid' : ''), 'placeholder' => 'Idempleado']) }}
             {!! $errors->first('idempleado', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('idsueldo') }}
-            {{ Form::text('idsueldo', $pago->idsueldo, ['class' => 'form-control' . ($errors->has('idsueldo') ? ' is-invalid' : ''), 'placeholder' => 'Idsueldo']) }}
+            {{ Form::label('Suedo Base') }}
+            {{ Form::select('idsueldo',$sueldos, $pago->idsueldo, ['class' => 'form-control' . ($errors->has('idsueldo') ? ' is-invalid' : ''), 'placeholder' => 'Idsueldo']) }}
             {!! $errors->first('idsueldo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('numeroentregas') }}
+            {{ Form::label('Numero de Entregas') }}
             {{ Form::text('numeroentregas', $pago->numeroentregas, ['class' => 'form-control' . ($errors->has('numeroentregas') ? ' is-invalid' : ''), 'placeholder' => 'Numeroentregas']) }}
             {!! $errors->first('numeroentregas', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('pagototal') }}
+            {{ Form::label('Pago Total') }}
             {{ Form::text('pagototal', $pago->pagototal, ['class' => 'form-control' . ($errors->has('pagototal') ? ' is-invalid' : ''), 'placeholder' => 'Pagototal']) }}
             {!! $errors->first('pagototal', '<div class="invalid-feedback">:message</div>') !!}
         </div>

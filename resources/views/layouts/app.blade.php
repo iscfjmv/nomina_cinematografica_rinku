@@ -30,7 +30,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('empleados.index') }}">{{ __('Empleados') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('roles.index') }}">{{ __('Roles') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('sueldos.index') }}">{{ __('Sueldos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('pagos.index') }}">{{ __('Pagos') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

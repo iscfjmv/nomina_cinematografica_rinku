@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Sueldo</span>
+                        <span class="card-title">Crear Nuevo Sueldo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('sueldos.store') }}"  role="form" enctype="multipart/form-data">

@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\PagoController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SueldoController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::resource('empleados', EmpleadoController::class);
 Auth::routes();
+Route::resource('empleados', EmpleadoController::class);
+Route::resource('roles', RoleController::class);
+Route::resource('sueldos', SueldoController::class);
+Route::resource('pagos', PagoController::class);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

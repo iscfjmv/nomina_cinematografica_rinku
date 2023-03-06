@@ -13,14 +13,15 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Sueldo') }}
+                                {{ __('Listado De Sueldos') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('sueldos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                            <div class="float-right">
+                                <a href="{{ route('sueldos.create') }}" class="btn btn-primary btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Crear Nuevo') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -35,13 +36,13 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
-										<th>Idrol</th>
-										<th>Sueldobase</th>
-										<th>Bono</th>
-										<th>Precioentrega</th>
-										<th>Horaslaborables</th>
-										<th>Diaslaborables</th>
+
+                                        <th>Rol</th>
+                                        <th>Sueldo Base</th>
+                                        <th>Bono</th>
+                                        <th>Precio por Entrega</th>
+                                        <th>Horas Laborables</th>
+                                        <th>Dias Laborables</th>
 
                                         <th></th>
                                     </tr>
@@ -50,21 +51,26 @@
                                     @foreach ($sueldos as $sueldo)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $sueldo->idrol }}</td>
-											<td>{{ $sueldo->sueldobase }}</td>
-											<td>{{ $sueldo->bono }}</td>
-											<td>{{ $sueldo->precioentrega }}</td>
-											<td>{{ $sueldo->horaslaborables }}</td>
-											<td>{{ $sueldo->diaslaborables }}</td>
+
+                                            <td>{{ $sueldo->role->nombrerol }}</td>
+                                            <td>{{ $sueldo->sueldobase }}</td>
+                                            <td>{{ $sueldo->bono }}</td>
+                                            <td>{{ $sueldo->precioentrega }}</td>
+                                            <td>{{ $sueldo->horaslaborables }}</td>
+                                            <td>{{ $sueldo->diaslaborables }}</td>
 
                                             <td>
-                                                <form action="{{ route('sueldos.destroy',$sueldo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('sueldos.show',$sueldo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('sueldos.edit',$sueldo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <form action="{{ route('sueldos.destroy', $sueldo->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('sueldos.show', $sueldo->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                    <a class="btn btn-sm btn-success"
+                                                        href="{{ route('sueldos.edit', $sueldo->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="fa fa-fw fa-trash"></i> Borrar</button>
                                                 </form>
                                             </td>
                                         </tr>

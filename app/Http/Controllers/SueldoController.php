@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sueldo;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class SueldoController extends Controller
     public function create()
     {
         $sueldo = new Sueldo();
-        return view('sueldo.create', compact('sueldo'));
+        $roles = Role::pluck('nombrerol', 'id');
+        return view('sueldo.create', compact('sueldo','roles'));
     }
 
     /**
@@ -73,8 +75,8 @@ class SueldoController extends Controller
     public function edit($id)
     {
         $sueldo = Sueldo::find($id);
-
-        return view('sueldo.edit', compact('sueldo'));
+        $roles = Role::pluck('nombrerol', 'id');
+        return view('sueldo.edit', compact('sueldo','roles'));
     }
 
     /**

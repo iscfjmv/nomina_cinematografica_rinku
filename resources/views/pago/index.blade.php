@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('pagos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nuevo Pago') }}
                                 </a>
                               </div>
                         </div>
@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idempleado</th>
-										<th>Idsueldo</th>
-										<th>Numeroentregas</th>
-										<th>Pagototal</th>
+										<th>Empleado</th>
+										<th>Sueldo Base</th>
+										<th>Numero de entregas</th>
+										<th>Pago Total</th>
 
                                         <th></th>
                                     </tr>
@@ -49,18 +49,18 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $pago->idempleado }}</td>
-											<td>{{ $pago->idsueldo }}</td>
+											<td>{{ $pago->empleado->nombre }}</td>
+											<td>{{ $pago->sueldo->sueldobase }}</td>
 											<td>{{ $pago->numeroentregas }}</td>
 											<td>{{ $pago->pagototal }}</td>
 
                                             <td>
                                                 <form action="{{ route('pagos.destroy',$pago->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('pagos.show',$pago->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('pagos.edit',$pago->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('pagos.show',$pago->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('pagos.edit',$pago->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
                                                 </form>
                                             </td>
                                         </tr>

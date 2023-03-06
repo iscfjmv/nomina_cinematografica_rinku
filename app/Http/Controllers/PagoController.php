@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Empleado;
 use App\Models\Pago;
+use App\Models\Sueldo;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +34,9 @@ class PagoController extends Controller
     public function create()
     {
         $pago = new Pago();
-        return view('pago.create', compact('pago'));
+        $empleados = Empleado::pluck('nombre', 'id');
+        $sueldos = Sueldo::pluck('sueldobase','id');
+        return view('pago.create', compact('pago','empleados','sueldos'));
     }
 
     /**
@@ -73,8 +77,9 @@ class PagoController extends Controller
     public function edit($id)
     {
         $pago = Pago::find($id);
-
-        return view('pago.edit', compact('pago'));
+        $empleados = Empleado::pluck('nombre', 'id');
+        $sueldos = Sueldo::pluck('sueldobase','id');
+        return view('pago.edit', compact('pago','empleados','sueldos'));
     }
 
     /**

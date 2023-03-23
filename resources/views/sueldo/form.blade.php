@@ -3,7 +3,7 @@
 
         <div class="form-group">
             {{ Form::label('Rol') }}
-            {{ Form::select('Rol', $roles, $sueldo->idrol, ['class' => 'form-control' . ($errors->has('idrol') ? ' is-invalid' : ''), 'placeholder' => 'Idrol']) }}
+            {{ Form::select('idrol', $roles, $sueldo->idrol, ['class' => 'form-control' . ($errors->has('idrol') ? ' is-invalid' : ''), 'placeholder' => 'Idrol']) }}
             {!! $errors->first('idrol', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
